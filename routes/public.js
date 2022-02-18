@@ -12,7 +12,7 @@ router.get('/findAllPost',async(req,res)=>{
         return res.send({msg:"success",data:posts});
         }
         const posts=await photoModel.find({});
-        return res.send({msg:"success",data:posts});
+        return res.send({msg:"success",data:posts.reverse()});
     }catch(err){
         res.send({msg:"something went wrong"});
     }
