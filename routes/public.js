@@ -39,8 +39,8 @@ router.get('/getProfile/:id',async(req,res)=>{
 router.get('/getPosts/:id',async(req,res)=>{
     try{
         const posts=await photoModel.find({userid:req.params.id});
-        const posts=posts.reverse();
-        res.send({msg:"success",data:posts});
+        const allposts=posts.reverse();
+        res.send({msg:"success",data:allposts});
     }catch(err){
         res.send({msg:"something went wrong"});
     }
