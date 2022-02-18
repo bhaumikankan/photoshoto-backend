@@ -12,6 +12,6 @@ app.use('/auth',require('./routes/auth'));
 app.use('/profile',require('./routes/profile'));
 app.use('/public',require('./routes/public'));
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT||5000,()=>{
     console.log('server running on port 5000');
 })
